@@ -34,9 +34,9 @@ jobs:
 
     - name: Build and Sign the Image
       run: |
-        docker build -t learn-sigstore_ch2:latest .
-        cosign sign --key cosign.key learn-sigstore_ch2:latest
-        docker push learn-sigstore_ch2:latest
+        docker build -t softveda/learn-sigstore_ch2:latest .
+        cosign sign --key cosign.key softveda/learn-sigstore_ch2:latest
+        docker push softveda/learn-sigstore_ch2:latest
 
     - name: Verify Image Signature
       run: cosign verify --key cosign.pub learn-sigstore_ch2:latest
