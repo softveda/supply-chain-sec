@@ -37,7 +37,7 @@ jobs:
 
     - name: Build and Sign the Image
       run: |
-        cosign sign -y env://COSIGN_PVT_KEY softveda/learn-sigstore_ch2:latest
+        cosign sign -y --key env://COSIGN_PVT_KEY softveda/learn-sigstore_ch2:latest
       env:
         COSIGN_PVT_KEY: ${{ secrets.COSIGN_PVT_KEY }}
 
